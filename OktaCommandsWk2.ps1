@@ -1,4 +1,3 @@
-﻿Connect-Okta "00nqUTefiidY53JNDWLrnzqJJCzISgdrmqjepysCSc" https://dev-ryanhightower.okta.com/
 
 $user = Get-OktaUser "me"
 
