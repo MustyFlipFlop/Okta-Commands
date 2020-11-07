@@ -1,7 +1,7 @@
 ﻿Connect-Okta "Your token" https://dev-___________.okta.com/
 
 function Import-BulkUsers($csvPath) {
-        $users = Import-Csv "csvPath.csv"
+        $users = Import-Csv $csvPath
         $resultsArray = @()
         foreach ($user in $users) {
             Write-Host "Creating user for"  $user.login
@@ -58,4 +58,4 @@ function Import-BulkUsers($csvPath) {
         }
         $resultsArray | Export-Csv ImportBulkUsers-Result.csv
     }
-Import-BulkUsers TestUsers.csv
+Import-BulkUsers csvPath.csv
